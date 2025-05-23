@@ -16,6 +16,7 @@ import cine.plus.cl.contenido.service.ContenidoService;
 
 
 @RestController
+@RequestMapping("/api/Contenido")
 public class ContenidoController {
 
     @Autowired
@@ -27,7 +28,7 @@ public class ContenidoController {
 
         if (contenido.isEmpty()) {
             // error 404 no encontrado.
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.notFound().build();
 
         }
         // estado 202 ok.

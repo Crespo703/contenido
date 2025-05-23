@@ -35,8 +35,7 @@ public class ContenidoService {
     }
 
     public void delete(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+       contenidoRepository.deleteById(id);
     }
 
 
